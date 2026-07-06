@@ -21,6 +21,8 @@ A production-ready full-stack application that allows users to upload documents 
 - 🐳 **Dockerized**: Easy deployment with Docker Compose
 
 ### 🏗️ High-Level System Architecture
+
+```mermaid
 graph TB
     subgraph "User Layer"
         User[👤 User]
@@ -115,8 +117,12 @@ graph TB
     class PostgreSQL,PgAdmin,Migrations database
     class Docker,DockerCompose,Volumes,Networks infrastructure
     class User,Browser user
+```
 
-# Database Schema ER Diagram
+
+##  **Database Schema ER Diagram**
+
+```mermaid
 erDiagram
     USERS ||--o{ DOCUMENTS : "owns"
     USERS ||--o{ QUESTIONS : "asks"
@@ -192,6 +198,7 @@ erDiagram
     
     DOCUMENTS ||--o{ DOCUMENT_EMBEDDINGS : "has"
     USERS ||--o{ API_LOGS : "generates"
+```
     
 ## 🛠️ Technology Stack
 
